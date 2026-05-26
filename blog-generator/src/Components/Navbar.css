@@ -1,0 +1,31 @@
+.nav{
+    /* background-color: red; */
+    height: 70px;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    margin-top: 15px;
+    padding: 0px 60px 0px 60px;
+}
+
+#model{
+    background-color: #183c75;
+    padding: 3px 15px 3px 15px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.profile{
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button{
+    border-radius: 30px;
+}

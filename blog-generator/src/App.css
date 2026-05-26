@@ -1,0 +1,322 @@
+main{
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.right{
+  position: absolute;
+  right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 80vw;
+  height: 100vh;
+}
+
+.head{
+  width: 80vw;
+  position: absolute;
+  right: 0;
+  margin-top: 120px;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* Dark overlay */
+    url('/public/5132890.jpg'); /* The image from image_e45f84.png */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  height: 150px;
+  gap: 20px;
+}
+
+
+.ai-text-gradient {
+  /* Set the gradient background */
+  background: linear-gradient(to top right, #4f46e5, #a855f7);
+  
+  /* Clip the background to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Make the actual text transparent so the background shows through */
+  color: transparent;
+  
+  /* Font styling to match the image */
+  font-weight: bold;
+  font-size: 2.5rem;
+  display: inline-block;
+}
+
+.generate-content{
+  /* background: #000; */
+  height: 75vh;
+  width: 80vw;
+  position: absolute;
+  top: 270px;
+  margin-right: -200px;
+  right: 0;
+  bottom: 0;
+}
+
+li{
+  cursor: pointer;
+}
+
+li:hover{
+  /* background-color: color-mix(in oklab, #1E293B 70%, transparent); */
+  background-color: #0b1120;
+}
+
+.input-details{
+  height: 90%;
+  width: 45%;
+  margin-left: 50px;
+  margin-top: 30px;
+  border-radius: 30px;
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+
+#topic{
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 50px;
+  width: 80%;
+  padding-left: 15px;
+  margin: 14px 10px 10px 30px;
+}
+
+#topic::placeholder{
+  color: white;
+}
+
+#tone{
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 50px;
+  width: 80%;
+  padding-left: 15px;
+  margin: 14px 10px 10px 30px;
+  background-color: #0b1120;
+}
+
+#words{
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 50px;
+  width: 80%;
+  padding-left: 15px;
+  margin: 14px 10px 10px 30px;
+  background-color: #0b1120;
+}
+
+.generate-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  gap: 20px;
+  width: 240px;
+}
+
+.display-content{
+  width: 80%;
+  height: 80%;
+  /* background-color: rgba(1, 31, 53, 0.59); */
+  position: absolute;
+  margin-right: 100px;
+  margin-top: 30px;
+  border-radius: 30px;
+  top: 780px;
+  right: 0;
+  bottom: 0;
+}
+
+.d-head{
+  font-size: larger;
+}
+
+.b{
+  border: 0.2px solid rgb(105, 98, 84); 
+  border-radius: 10px;
+}
+
+.blog{
+  /* background-color: aquamarine; */
+  height: 350px;
+  width: 600px;
+}
+
+.blog-content{
+  height: 400px;
+  width: 600px;
+  border: 0.2px solid rgb(105, 98, 84); 
+  border-radius: 10px;
+  word-break: break-word;
+  padding: 20px;
+  
+}
+
+.input-p{
+  text-align: start;
+}
+
+
+.left{
+  background-color: #1a2746;
+  height: 100vh;
+  position: fixed;
+  width: 20vw;
+  position: absolute;
+}
+
+.l-span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 25px;
+}
+
+.l-nav{
+  margin-top: 30px;
+  margin-left: 24px;
+}
+
+li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0px 30px 0px 40px;
+}
+
+.l-nav ul li:hover{
+  background: linear-gradient(to right, #1e3772 10% ,transparent(0%),black,transparent(20%));
+}
+
+.line{
+  height: 1px;
+  background-color: rgb(173, 173, 158);
+  width: 85%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Creating the colored circle */
+.blog-item::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 6px; /* Align with first line of text */
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+/* Color Classes */
+.blue::before { background-color: #4f46e5; }
+.orange::before { background-color: #f59e0b; }
+.teal::before { background-color: #0caabb; }
+.purple::before { background-color: #a855f7; }
+.pink::before { background-color: #ef4444; }
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #e2e8f0;
+}
+
+.timestamp {
+  font-size: 0.85rem;
+  color: #64748b; /* Muted color for the time */
+}
+
+/* overflow-y-auto pr-2 space-y-6 scrollbar-hide hover:scrollbar-default */
+
+.history-list{
+  height: 210px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+}
+/* Custom scrollbar for a cleaner UI */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b1120; 
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #78a6f0; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155; 
+}
+
+.ac-info{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  min-height: screen;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loading{
+  background: linear-gradient(rgba(9, 86, 138, 0.9), rgba(1, 14, 60, 0.6)), transparent;
+  height: 50vh;
+  width: 30vw;
+  position: absolute;
+  /* z-index: 9; */
+  top: 25%;
+  left: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+video{
+  height: 40vh;
+  width: 36vw;
+}
+
+#c-text{
+  font-size: 1.4rem;
+
+}
