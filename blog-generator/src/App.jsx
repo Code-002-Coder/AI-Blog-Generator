@@ -28,7 +28,7 @@ const App = () => {
       setloading(true)
       const prompt = `Write a blog on ${t} in ${w} words. The format of the blog should be a ${p}.`;
       setquery(prompt);
-      const response =await fetch(' /api/generate',{
+      const response =await fetch('https://ai-blog-generator-zy5w.onrender.com/api/generate',{
         method:"POST",
         headers:{'Content-Type': 'application/json'},
         body:JSON.stringify({prompt: query}),
