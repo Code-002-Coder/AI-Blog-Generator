@@ -37,7 +37,7 @@ const App = () => {
       const data =  await response.json()
       setdata(data.reply)
       var d = {"topic": t ,"content": data.reply, "fav": false }
-      hist(d);
+    
     }
     catch (error){
       console.log("Error is Raise in Data fetching")
@@ -48,18 +48,6 @@ const App = () => {
     }
   }
   
-  const hist = (entry) => {
-     
-    useEffect(() => {
-      const prev = JSON.parse(localStorage.getItem("History"))
-      setpassArray(prev => [...prev, entry])})
-    }, [passArray]
-    // console.log(d)
-    // console.log(JSON.stringify(d))
-    console.log("Pass Array: ",passArray)
-    localStorage.setItem("History", JSON.stringify(passArray))
-    console.log("Your data add successful ")
-  }
   
   const copy1 = () =>{
     console.log(p)
