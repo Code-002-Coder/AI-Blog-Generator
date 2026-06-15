@@ -11,6 +11,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" })   // gemini-2.5-flash-lite
 
 app.get('/', (req, res) => {
+  res.send("Server running ✅");
   //res.sendFile("index.html", { root: "D:\\AI Blog Generator\\blog-generator" });
 });
 
