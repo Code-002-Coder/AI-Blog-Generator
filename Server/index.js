@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 app.post('/api/generate', async (req, res) => {
   var attempts = 0;
-  
+  res.send("Server running on /api/generate ✅")
   try {
     const result = await model.generateContent(req.body.prompt)
     const text = await result.response.text()
