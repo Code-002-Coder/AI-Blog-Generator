@@ -20,8 +20,8 @@ app.post('/api/generate', async (req, res) => {
   res.send("Server running on /api/generate ✅")
   try {
     const result = await model.generateContent(req.body.prompt)
-    const text = await result.response.text()
-    
+    //const text = await result.response.text()
+    const text = "lorem jhsda jksahdjk asdjhk sadhjkhda jahdjk asdjhkjasd kjhdkjah jxzci zxjhcjc"
     res.json({ reply: text })
   }
   catch (error) {
