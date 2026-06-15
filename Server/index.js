@@ -17,11 +17,11 @@ app.get('/', (req, res) => {
 
 app.post('/api/generate', async (req, res) => {
   var attempts = 0;
-  res.send("Server running on /api/generate ✅")
+  
   try {
     const result = await model.generateContent(req.body.prompt)
-    //const text = await result.response.text()
-    const text = "lorem jhsda jksahdjk asdjhk sadhjkhda jahdjk asdjhkjasd kjhdkjah jxzci zxjhcjc"
+    const text = await result.response.text()
+    
     res.json({ reply: text })
   }
   catch (error) {
